@@ -5,12 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venue</title>
     <!-- You can add CSS or other meta tags here -->
+    <!-- You can add CSS or other meta tags here -->
+    <style>
+        /* Style the search input */
+        .search-container {
+            margin-top: 20px;
+        }
+        input[type=text] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        input[type=submit] {
+            background-color: rgb(196,19,107);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: rgb(196,19,107);
+        }
+        .container {
+    display: flex;
+}
+
+.venue {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Hide overflow */
+    margin-right: 40px; /* Adjust spacing between images */
+    margin-top: 30px;
+}
+
+.venue img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire container */
+}
+
+    </style>
 </head>
 <body>
     <!-- Your content goes here -->
     <h1>Wedding Venues</h1>
     <h6>Showing 33706 results as per your search criteria</h6>
-    
+    <div class="search-container">
+        <form action="/search" method="get">
+            <input type="text" placeholder="Search wedding venues" name="search">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div class="container">
+        <div class="venue">
+            <img src="goa pw.jpg" alt="Venue 1">
+        </div>
+        <div class="venue">
+            <img src="mumbai pw.jpg" alt="Venue 2">
+        </div>
+        <div class="venue">
+            <img src="delhi pw.jpg" alt="Venue 3">
+        </div>
+        <div class="venue">
+            <img src="kolkata pw.jpg" alt="Venue 3">
+        </div>
+        <div class="venue">
+            <img src="chennai pw.jpg" alt="Venue 3">
+        </div>
+        <div class="venue">
+            <img src="hyderabad pw.jpg" alt="Venue 3">
+        </div>
+        <div class="venue">
+            <img src="pune pw.jpg" alt="Venue 3">
+        </div>
+        <div class="venue">
+            <img src="lucknow pw.jpg" alt="Venue 3">
+        </div>
+        <div class="venue">
+            <img src="italy.jpg" alt="Venue 3">
+        </div>
+        <div class="venue">
+            <img src="france.jpg" alt="Venue 3">
+        </div>
     <!-- You can include JavaScript or other scripts here -->
 </body>
 </html>
