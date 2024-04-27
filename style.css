@@ -120,12 +120,22 @@ background-color: rgb(255, 173, 218);
     margin: 0 0 10px 0;
 }
 
-@media (max-width: 768px) {
-    .venue-container {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-}
+
 .section-1{
 margin:9%;
 
+}
+h2{
+    color: rgb(238, 16, 164);
+}
+h4{
+    color: rgb(11, 12, 10);
+}
+.Searches{
+   height:140px;
+   width:140px;
+   background-color: #FFD1DC;
+   justify-content: flex-start;
+   display: block;
+   display: flexbox;
 }
