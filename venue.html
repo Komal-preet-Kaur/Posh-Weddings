@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venue</title>
-    <!-- You can add CSS or other meta tags here -->
     <style>
-        /* Resetting default browser styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Navbar styles */
         .navbar {
             background-color: #FD1593;
-            /* Pink background */
             padding: 10px;
         }
 
@@ -27,14 +23,12 @@
             justify-content: space-between;
         }
 
-        /* Logo styles */
         .logo {
             color: #fff;
             font-size: 25px;
             text-decoration: none;
         }
 
-        /* Menu list styles */
         .menu-list {
             list-style-type: none;
             margin: 0;
@@ -55,7 +49,6 @@
             text-decoration: none;
         }
 
-        /* Dropdown styles */
         .dropdown {
             position: relative;
         }
@@ -85,7 +78,6 @@
             display: block;
         }
 
-        /* Search container styles */
         .search-container {
             display: flex;
             align-items: center;
@@ -114,7 +106,6 @@
             color: #FFD1DC;
         }
 
-        /* Media query for responsiveness */
         @media screen and (max-width: 768px) {
             .navbar-container {
                 flex-direction: column;
@@ -155,63 +146,40 @@
             margin: 50px;
         }
 
-        /* Styling for the heading */
         .heading {
             font-family: Arial, sans-serif;
-            /* Change the font family */
             color: #434343;
-            /* Change the color */
-            /* Change the font size */
             font-weight: lighter;
-            /* Optionally, change the font weight */
-            /* Add any additional styling here, such as text-align, text-transform, etc. */
         }
 
 
         .venue {
             width: 100px;
-            /* Adjust as needed */
             height: 100px;
-            /* Adjust as needed */
             border-radius: 50%;
-            /* Make it circular */
             overflow: hidden;
-            /* Hide overflow */
             margin-right: 15px;
-            /* Adjust spacing between images */
             margin-left: 15px;
             margin-top: 30px;
             text-align: center;
-
             position: relative;
         }
 
         .venue img {
             width: 100%;
-            /* Ensure the image fills the container */
             height: auto;
-            /* Maintain aspect ratio */
             object-fit: cover;
-            /* Cover the entire container */
         }
 
         .caption {
             position: absolute;
-            /* Set position absolute */
             bottom: 0;
-            /* Align at the bottom */
             left: 0;
-            /* Align left */
             width: 100%;
-            /* Full width */
             background-color: rgba(35, 35, 35, 0.7);
-            /* Background color for better readability */
             color: white;
-            /* Text color */
             padding: 5px;
-            /* Padding for better appearance */
             box-sizing: border-box;
-            /* Include padding in width calculation */
         }
 
 
@@ -285,7 +253,6 @@
         </div>
     </nav>
     <div class="box">
-        <!-- Your content goes here -->
     
         <h3 class="heading">Wedding Venues</h3>
         <h5 class="heading">Showing results as per your search criteria</h5>
@@ -341,14 +308,11 @@
                     <img src="france.jpg" alt="Venue 10">
                     <div class="caption">France</div>
                 </div>
-                <!-- You can include JavaScript or other scripts here -->
             </div>
 
         </div>
         <br>
         <br>
-
-        <!--Venue cards-->
 
         <div class="venue-container">
             <div class="venue-card">
@@ -399,7 +363,7 @@
             <div class="venue-card">
                 <img src="venue7.jpg" alt="Venue 1">
                 <div class="venue-info">
-                    <h3>Ambiance hetel</h3>
+                    <h3>Ambiance hotel</h3>
                     <p>Location: Ambala</p>
                     <p>Price: Rs.XXXXX</p>
                     <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -417,8 +381,8 @@
             <div class="venue-card">
                 <img src="venue9.jpg" alt="Venue 1">
                 <div class="venue-info">
-                    <h3>Radiance Tania Farms</h3>
-                    <p>Location: Goa</p>
+                    <h3>MB Garden and Resorts</h3>
+                    <p>Location: Lucknow</p>
                     <p>Price: $XXXXX</p>
                     <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
@@ -426,69 +390,135 @@
             <div class="venue-card">
                 <img src="venue10.jpg" alt="Venue 1">
                 <div class="venue-info">
-                    <h3>Radiance Tania Farms</h3>
-                    <p>Location: Goa</p>
-                    <p>Price: $XXXXX</p>
+                    <h3>Prathamesh Resort</h3>
+                    <p>Location: Pune</p>
+                    <p>Price: Rs. XXXXX</p>
                     <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="venue-card">
                 <img src="venue11.jpg" alt="Venue 1">
                 <div class="venue-info">
-                    <h3>Radiance Tania Farms</h3>
-                    <p>Location: Goa</p>
-                    <p>Price: $XXXXX</p>
+                    <h3>Hotel Grand Maple</h3>
+                    <p>Location: Jalandhar</p>
+                    <p>Price: Rs. XXXXX</p>
                     <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="venue-card">
                 <img src="venue12.jpg" alt="Venue 1">
                 <div class="venue-info">
-                    <h3>Radiance Tania Farms</h3>
-                    <p>Location: Goa</p>
-                    <p>Price: $XXXXX</p>
+                    <h3>Le Roma Gardenia</h3>
+                    <p>Location: Bangalore</p>
+                    <p>Price: Rs. XXXXX</p>
                     <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="venue-card">
                 <img src="venue13.jpg" alt="Venue 1">
                 <div class="venue-info">
-                    <h3>Radiance Tania Farms</h3>
-                    <p>Location: Goa</p>
-                    <p>Price: $XXXXX</p>
+                    <h3>Chandravas</h3>
+                    <p>Location: Hyderabad</p>
+                    <p>Price: Rs. XXXXX</p>
                     <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="venue-card">
                 <img src="venue14.jpg" alt="Venue 1">
                 <div class="venue-info">
-                    <h3>Radiance Tania Farms</h3>
-                    <p>Location: Goa</p>
-                    <p>Price: $XXXXX</p>
+                    <h3>Nakshatra Palace</h3>
+                    <p>Location: Pune</p>
+                    <p>Price: Rs. XXXXX</p>
                     <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="venue-card">
                 <img src="venue15.jpg" alt="Venue 1">
                 <div class="venue-info">
-                    <h3>Radiance Tania Farms</h3>
+                    <h3>Royal Orchid Beach Resort</h3>
                     <p>Location: Goa</p>
-                    <p>Price: $XXXXX</p>
+                    <p>Price: Rs. XXXXX</p>
                     <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="venue-card">
                 <img src="venue16.jpg" alt="Venue 1">
                 <div class="venue-info">
-                    <h3>Radiance Tania Farms</h3>
-                    <p>Location: Goa</p>
-                    <p>Price: $XXXXX</p>
+                    <h3>Mallu Farms</h3>
+                    <p>Location: Delhi</p>
+                    <p>Price: Rs. XXXXX</p>
                     <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
-            <!-- Add more venue cards here -->
         </div>
     </div>
+    <footer style="background-color: rgba(0, 0, 0, 0.8); color: #fce4ea; padding: 30px 0;">
+        <div class="ofooter-container" style="margin-right:100px; margin-left:100px;">
+            <div class="row" style="display: flex; justify-content:space-between;">
+                <div class="col-md-3" style="margin-right: 100px">
+                    <h4 style="font-family: Arial, sans-serif; color:#fbb5cc;">Start Planning</h4>
+                    <br>
+                    <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                        <li>Search By Vendor</li>
+                        <br>
+                        <li>Search By City</li>
+                        <br>
+                        <li>Download Our App</li>
+                        <br>
+                        <li>Top rated vendors</li>
+                    </ul>
+                </div>
+                <div class="col-md-3" style="margin-right: 100px">
+                    <h4 style="font-family: Arial, sans-serif; color:#fbb5cc;">Wedding Ideas</h4>
+                    <br>
+                    <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                        <li>Wedding Blog</li>
+                        <br>
+                        <li>Wedding Inspiration Gallery</li>
+                        <br>
+                        <li>Real Wedding</li>
+                        <br>
+                        <li>Submit Wedding</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3" style="margin-right: 100px">
+                    <h4 style="font-family: Arial, sans-serif; color:#fbb5cc;">Photo Gallery</h4>
+                    <br>
+                    <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                        <li>Bridal wear</li>
+                        <br>
+                        <li>Wedding Jwellery</li>
+                        <br>
+                        <li>Bridal Makeup and Hair</li>
+                        <br>
+                        <li>Wedding Photography</li>
+                        <br>
+                        <li>Groom wear</li>
+                        <br>
+                        <li>Wedding accessories</li>
+                        <br>
+                        <li>Mehendi Designs</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3" style="margin-right: 100px">
+                    <h4 style="font-family: Arial, sans-serif; color:#fbb5cc;">Home</h4>
+                    <br>
+                    <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                        <li>About PoshWeddings</li>
+                        <br>
+                        <li>Contact us</li>
+                        <br>
+                        <li>Yerms and Conditiions</li>
+                        <br>
+                        <li>Privacy Policy</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
