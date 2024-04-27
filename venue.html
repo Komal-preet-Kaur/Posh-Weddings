@@ -1,96 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venue</title>
     <!-- You can add CSS or other meta tags here -->
-    <!-- You can add CSS or other meta tags here -->
     <style>
-        /* Style the search input */
-        .search-container {
-            margin-top: 20px;
+        /* Resetting default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        input[type=text] {
-            width: 300px;
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #FD1593;
+            /* Pink background */
             padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
         }
-        input[type=submit] {
-            background-color: rgb(196,19,107);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Logo styles */
+        .logo {
+            color: #fff;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        /* Menu list styles */
+        .menu-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu-list li {
+            margin-right: 20px;
+        }
+
+        .menu-list li:last-child {
+            margin-right: 0;
+        }
+
+        .menu-list li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            color: #fff;
+            text-decoration: none;
             cursor: pointer;
         }
-        input[type=submit]:hover {
-            background-color: rgb(196,19,107);
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:#FD1593;
+            min-width: 160px;
+            z-index: 1;
         }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Search container styles */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .search-container button {
+            padding: 8px 15px;
+            background-color: #FFD1DC;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color:#FD1593;
+            font-size: 16px;
+        }
+
+        .search-container button i {
+            color: #FFD1DC;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-width: 768px) {
+            .navbar-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search-container {
+                margin-top: 10px;
+            }
+
+            .search-container button:hover {
+                background-color: #F8BDD1;
+            }
+
+            .menu-list {
+                margin-top: 10px;
+            }
+
+            .menu-list li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .dropdown {
+                margin-bottom: 10px;
+            }
+        }
+
+
         .container {
-    display: flex;
-}
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
 
-.venue {
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    border-radius: 50%; /* Make it circular */
-    overflow: hidden; /* Hide overflow */
-    margin-right: 40px; /* Adjust spacing between images */
-    margin-top: 30px;
-}
+        }
 
-.venue img {
-    width: 100%; /* Ensure the image fills the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the entire container */
-}
+        .box {
+            margin: 50px;
+        }
 
+        /* Styling for the heading */
+        .heading {
+            font-family: Arial, sans-serif;
+            /* Change the font family */
+            color: #434343;
+            /* Change the color */
+            /* Change the font size */
+            font-weight: lighter;
+            /* Optionally, change the font weight */
+            /* Add any additional styling here, such as text-align, text-transform, etc. */
+        }
+
+
+        .venue {
+            width: 100px;
+            /* Adjust as needed */
+            height: 100px;
+            /* Adjust as needed */
+            border-radius: 50%;
+            /* Make it circular */
+            overflow: hidden;
+            /* Hide overflow */
+            margin-right: 15px;
+            /* Adjust spacing between images */
+            margin-left: 15px;
+            margin-top: 30px;
+            text-align: center;
+
+            position: relative;
+        }
+
+        .venue img {
+            width: 100%;
+            /* Ensure the image fills the container */
+            height: auto;
+            /* Maintain aspect ratio */
+            object-fit: cover;
+            /* Cover the entire container */
+        }
+
+        .caption {
+            position: absolute;
+            /* Set position absolute */
+            bottom: 0;
+            /* Align at the bottom */
+            left: 0;
+            /* Align left */
+            width: 100%;
+            /* Full width */
+            background-color: rgba(35, 35, 35, 0.7);
+            /* Background color for better readability */
+            color: white;
+            /* Text color */
+            padding: 5px;
+            /* Padding for better appearance */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+        }
+
+
+        .venue-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .venue-card {
+            height: 400px;
+            background-color: #FFD1DC;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow:hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .venue-card img {
+            width: 100%;
+            height: 60%;
+            display: block;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .venue-info {
+            padding: 20px;
+        }
+
+        .venue-info h3 {
+            margin: 0 0 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .venue-container {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
     </style>
 </head>
+
 <body>
-    <!-- Your content goes here -->
-    <h1>Wedding Venues</h1>
-    <h6>Showing 33706 results as per your search criteria</h6>
-    <div class="search-container">
-        <form action="/search" method="get">
-            <input type="text" placeholder="Search wedding venues" name="search">
-            <input type="submit" value="Search">
-        </form>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">PoshWeddings</a>
+            <ul class="menu-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Venues</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Services</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">E-Invites</a>
+                    <div class="dropdown-content">
+                        <a href="#">Wedding Card Designs</a>
+                        <a href="#">Wedding vedios</a>
+                        <a href="#">E-Card Templates</a>
+                        <a href="#">Many more...</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="search-container">
+                <form action="#" method="get">
+                    <input type="text" placeholder="Search venues..." name="search">
+                    <button type="submit">Search<i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="box">
+        <!-- Your content goes here -->
+    
+        <h3 class="heading">Wedding Venues</h3>
+        <h5 class="heading">Showing results as per your search criteria</h5>
+
+        <div class="image-container">
+
+
+            <div class="container">
+
+
+                <div class="venue">
+                    <img src="goa pw.jpg" alt="Venue 1">
+                    <div class="caption">Goa</div>
+
+                </div>
+
+
+
+                <div class="venue">
+                    <img src="mumbai pw.jpg" alt="Venue 2">
+                    <div class="caption">Mumbai</div>
+                </div>
+                <div class="venue">
+                    <img src="delhi pw.jpg" alt="Venue 3">
+                    <div class="caption">Delhi</div>
+                </div>
+                <div class="venue">
+                    <img src="kolkata pw.jpg" alt="Venue 4">
+                    <div class="caption">Kolkata</div>
+                </div>
+                <div class="venue">
+                    <img src="chennai pw.jpg" alt="Venue 5">
+                    <div class="caption">Chennai</div>
+                </div>
+                <div class="venue">
+                    <img src="hyderabad pw.jpg" alt="Venue 6">
+                    <div class="caption">Hyderabad</div>
+                </div>
+                <div class="venue">
+                    <img src="pune pw.jpg" alt="Venue 7">
+                    <div class="caption">Pune</div>
+
+                </div>
+                <div class="venue">
+                    <img src="lucknow pw.jpg" alt="Venue 8">
+                    <div class="caption">Lucknow</div>
+                </div>
+                <div class="venue">
+                    <img src="italy.jpg" alt="Venue 9">
+                    <div class="caption">Italy</div>
+                </div>
+                <div class="venue">
+                    <img src="france.jpg" alt="Venue 10">
+                    <div class="caption">France</div>
+                </div>
+                <!-- You can include JavaScript or other scripts here -->
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+        <!--Venue cards-->
+
+        <div class="venue-container">
+            <div class="venue-card">
+                <img src="venue1.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>JaiBagh Palace</h3>
+                    <p>Location: Jaipur</p>
+                    <p>Price: Rs. 45000</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue3.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radiance Tania Farms</h3>
+                    <p>Location: Goa</p>
+                    <p>Price: Rs. XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue4.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>ASJ Resort</h3>
+                    <p>Location: Mumbai</p>
+                    <p>Price: Rs. XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue5.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Rania Farms</h3>
+                    <p>Location: Delhi</p>
+                    <p>Price: Rs.XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue6.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radisin Pink hotel</h3>
+                    <p>Location: Patiala</p>
+                    <p>Price: Rs. XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue7.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Ambiance hetel</h3>
+                    <p>Location: Ambala</p>
+                    <p>Price: Rs.XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue8.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Gathbandhan Palace</h3>
+                    <p>Location: Chandigarh</p>
+                    <p>Price: Rs. XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue9.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radiance Tania Farms</h3>
+                    <p>Location: Goa</p>
+                    <p>Price: $XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue10.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radiance Tania Farms</h3>
+                    <p>Location: Goa</p>
+                    <p>Price: $XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue11.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radiance Tania Farms</h3>
+                    <p>Location: Goa</p>
+                    <p>Price: $XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue12.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radiance Tania Farms</h3>
+                    <p>Location: Goa</p>
+                    <p>Price: $XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue13.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radiance Tania Farms</h3>
+                    <p>Location: Goa</p>
+                    <p>Price: $XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue14.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radiance Tania Farms</h3>
+                    <p>Location: Goa</p>
+                    <p>Price: $XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue15.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radiance Tania Farms</h3>
+                    <p>Location: Goa</p>
+                    <p>Price: $XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="venue16.jpg" alt="Venue 1">
+                <div class="venue-info">
+                    <h3>Radiance Tania Farms</h3>
+                    <p>Location: Goa</p>
+                    <p>Price: $XXXXX</p>
+                    <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <!-- Add more venue cards here -->
+        </div>
     </div>
-    <div class="container">
-        <div class="venue">
-            <img src="goa pw.jpg" alt="Venue 1">
-        </div>
-        <div class="venue">
-            <img src="mumbai pw.jpg" alt="Venue 2">
-        </div>
-        <div class="venue">
-            <img src="delhi pw.jpg" alt="Venue 3">
-        </div>
-        <div class="venue">
-            <img src="kolkata pw.jpg" alt="Venue 3">
-        </div>
-        <div class="venue">
-            <img src="chennai pw.jpg" alt="Venue 3">
-        </div>
-        <div class="venue">
-            <img src="hyderabad pw.jpg" alt="Venue 3">
-        </div>
-        <div class="venue">
-            <img src="pune pw.jpg" alt="Venue 3">
-        </div>
-        <div class="venue">
-            <img src="lucknow pw.jpg" alt="Venue 3">
-        </div>
-        <div class="venue">
-            <img src="italy.jpg" alt="Venue 3">
-        </div>
-        <div class="venue">
-            <img src="france.jpg" alt="Venue 3">
-        </div>
-    <!-- You can include JavaScript or other scripts here -->
+
 </body>
+
 </html>
