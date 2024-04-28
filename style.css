@@ -131,11 +131,47 @@ h2{
 h4{
     color: rgb(11, 12, 10);
 }
-.Searches{
-   height:140px;
-   width:140px;
-   background-color: #FFD1DC;
-   justify-content: flex-start;
-   display: block;
-   display: flexbox;
+.Popular-Search {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 330%;  
+    background-repeat: repeat-x;
 }
+.Search-img{
+   height:100px;
+   width: 100px;
+   display: inline;
+   display: inline-flex;
+   
+   
+}
+.Info{
+    display: block;
+    padding: 20px;
+}
+
+
+.Popular-Search .Search {
+    display: inline-block;
+    margin-right: 20px;  
+    vertical-align: top; 
+    
+}
+.Search img {
+    width:300px;
+    height:300px ;
+    display: inline-flex;
+    border-radius: 5px 5px 0 0;
+    display: inline flex ;
+    background-repeat: repeat;
+    
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h3 {
+    margin: 0 0 10px 0;
+}
+
