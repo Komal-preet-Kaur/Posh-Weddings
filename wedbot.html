@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posh Weddings</title>
+    <link rel="icon" href="logo.png">
+    <link href="wedbot.css" rel="stylesheet">
+    <script src="wedbot.js"></script>
+</head>
+<body>
+    <div class="background-container"></div>
+
+    <h3><a id="home-button" href="login.html" style="text-decoration: none;">Back</a> </h3><!-- Home button outside chat container -->
+
+    <div id="chat-container">
+        <h2>wedbot</h2> <!-- Add this heading -->
+        <div id="chat-log">
+            <!-- Display predefined questions -->
+            <p>wedbot:-Hello,I a wedbot.
+            Feel free to ask me anything about Posh Weddings! Here are some examples:</p>
+            <p>wedbot: - What is Posh Weddings?</p>
+            <p>wedbot: - How can I contact you?</p>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</body>
+</html>
