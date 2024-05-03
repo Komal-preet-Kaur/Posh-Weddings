@@ -127,6 +127,10 @@
     }
 }
 
+.vendor-container{
+    margin: 80px;
+}
+
 .vendor-row {
     display: flex;
     justify-content: space-between;
