@@ -1,8 +1,9 @@
 *{
     font-family:'Times New Roman', Times, serif;
+    
 }
 .background-image {
-background-image: url("https://m.media-amazon.com/images/I/61Kg6wyypmL._AC_SX569_.jpg");
+background-image: url("Front.jpg");
 background-size: cover; /* This will make the image cover the entire container */
 background-position: center; /* This will center the image */
 background-repeat: no-repeat;
@@ -13,7 +14,7 @@ top: 0; /* This positions the element at the top of its containing section */
 left: 0; /* This positions the element at the left of its containing section */
 bottom:0;
 z-index: -1; /* This ensures the background is behind other content */
-opacity:80%;
+
 
 }
 
@@ -29,8 +30,9 @@ opacity:80%;
 }
 
 
-h1{
-    color:rgb(238, 16, 164) ;
+.h1main{
+    color:#186605 ;
+    text-shadow: 1px 1px 2px black, 0 0 25px #62e741, 0 0 5px  #186605;
     font-family:'Times New Roman', Times, serif;
     font-display:inherit;
     font-weight:bold;
@@ -40,9 +42,12 @@ h1{
 
 
 }
+.heading{
+    color:#f71348;
+}
 
 nav {
-background-color: rgb(196, 19, 107);
+background-color: #f71348;
 overflow: hidden;
 }
 
@@ -62,14 +67,16 @@ font-size: 25px;
 
 li a {
 display: block;
-border-color: ;
-color: rgb(238, 16, 164);
+border-color:#62e741;
+color:#186605;
+font-size:25px;
+font-weight: bold;
 padding: 14px 16px;
 text-decoration: none;
 }
 
 li a:hover {
-background-color: rgb(255, 173, 218);
+box-shadow: 5px 5px 5px 5px #73ff50;
 }
 .venue {
     width: 100px;
@@ -122,11 +129,11 @@ background-color: rgb(255, 173, 218);
 
 
 .section-1{
-margin:9%;
+margin:7%;
 
 }
 h2{
-    color: rgb(238, 16, 164);
+    color:#f71348;
 }
 h4{
     color: rgb(11, 12, 10);
@@ -156,19 +163,21 @@ h4{
     margin-right: 20px;  
     vertical-align: top; 
     
+    
 }
 .Search img {
     width:300px;
     height:300px ;
     display: inline-flex;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 5px 5px;
     display: inline flex ;
-    background-repeat: repeat;
+    background-repeat: repeat-x;
     
 }
 
 .info {
     padding: 20px;
+    
 }
 
 .info h3 {
