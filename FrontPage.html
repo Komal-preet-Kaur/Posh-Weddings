@@ -4,106 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posh Weddings</title>
-    <style>
-        *{
-            font-family:'Times New Roman', Times, serif;
-        }
-        .background-image {
-    background-image: url("https://m.media-amazon.com/images/I/61Kg6wyypmL._AC_SX569_.jpg");
-    background-size: cover; /* This will make the image cover the entire container */
-    background-position: center; /* This will center the image */
-    background-repeat: no-repeat;
-    width: 100%; /* Adjust this as needed */
-    height: 110%; /* Adjust this as needed */
-    position: absolute; /* This positions the element absolutely within its containing section */
-    top: 0; /* This positions the element at the top of its containing section */
-    left: 0; /* This positions the element at the left of its containing section */
-    bottom:0;
-    z-index: -1; /* This ensures the background is behind other content */
-    opacity:80%;
+    <link rel="icon" href="logo.png" class="logo">
+    <link rel="stylesheet" href="style.css">
 
-}
-
-        .section1{
-            width: 100%;
-            height: 110%;
-           
-        }
-        .headingfront{
-          padding: 13% 10%;
-
-    }
-        
-        
-        h1{
-            color:rgb(238, 16, 164) ;
-            font-family:'Times New Roman', Times, serif;
-            font-display:inherit;
-            font-weight:bold;
-            font-size:55px;
-            text-align: center;
-            text-transform:capitalize;
-
-
-        }
-        /* Add this CSS to style the navigation bar */
-nav {
-    background-color: rgb(196, 19, 107);
-    overflow: hidden;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-li {
-    display: inline-block;
-    border-radius: 20px 20px;
-    font-size: 25px;
-    
-}
-
-li a {
-    display: block;
-    border-color: ;
-    color: rgb(238, 16, 164);
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: rgb(255, 173, 218);
-}
-
-
-
-    </style>
 </head>
 <body>
+    <!-------------------------Frontpage------------------------------->
+<div class="section-1">
 
-
-    <section class="Section1">
+    <section>
         <div class="nav">
             <ul>
-               <li><a href="#Venues">Venues</a></li>
-               <li><a href="Shop">Shop</a></li>
-               <li><a href="#Decorations">Decoration</a></li>
-               <li><a href="#Shoots">Shoots</a></li>
-               <li><a href="#Cards">Cards</a></li>
+               <li><a href="Venue.htm">Venues</a></li>
+               <li><a href="Vendor.html">Shop</a></li>
+               <li><a href="contact.html">Contact Us</a></li>
+               <li id="login"><a href="login.html">Login/Signup</a></li>
            </ul>
                
    </div>
 
-       <div class="headingfront"><h1>PLAN YOUR BEST LIFE MOMENTS OF TOGETHERNESS </h1></div> 
+       <div class="headingfront"><h1 class="h1main">PLAN YOUR BEST LIFE MOMENTS OF TOGETHERNESS </h1></div> 
         <div class="background-image">
         </div>
         
     </section>
-    <section class="section2">
+</div>
+<!-------------------------Venue Section-------------------------->
+<h1 class="heading"> Venues</h1>
+<div class="venue-container">
+    <div class="venue-card">
+        <img src="venue1.jpg" alt="Venue 1">
+        <div class="venue-info">
+            <h3>JaiBagh Palace</h3>
+            <p>Location: Jaipur</p>
+            <p>Price: Rs. 45000</p>
+            <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div class="venue-card">
+        <img src="venue3.jpg" alt="Venue 1">
+        <div class="venue-info">
+            <h3>Radiance Tania Farms</h3>
+            <p>Location: Goa</p>
+            <p>Price: Rs. XXXXX</p>
+            <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div class="venue-card">
+        <img src="C:\Users\admin\Desktop\COLLEGE WORK\PROJECT\Pictures\venue4.jpg" alt="Venue 1">
+        <div class="venue-info">
+            <h3>ASJ Resort</h3>
+            <p>Location: Mumbai</p>
+            <p>Price: Rs. XXXXX</p>
+            <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div class="venue-card">
+        <img src="venue5.jpg" alt="Venue 1">
+        <div class="venue-info">
+            <h3>Rania Farms</h3>
+            <p>Location: Delhi</p>
+            <p>Price: Rs.XXXXX</p>
+            <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div class="venue-card">
+        <img src="venue6.jpg" alt="Venue 1">
+        <div class="venue-info">
+            <h3>Radisin Pink hotel</h3>
+            <p>Location: Patiala</p>
+            <p>Price: Rs. XXXXX</p>
+            <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div class="venue-card">
+        <img src="venue7.jpg" alt="Venue 1">
+        <div class="venue-info">
+            <h3>Ambiance hotel</h3>
+            <p>Location: Ambala</p>
+            <p>Price: Rs.XXXXX</p>
+            <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <!------------------------------Popular Searches-------------------------------->
+<div class="Popular-Search">
+    <h1 class="heading"> Popular Searches</h1>
+
+    <marquee behavious="scroll" direction="left">
+    <div class="Search">
+        <img src="Photographers.jpg "alt="Venue 1">
+        <div class="info"><h3>Photographers</h3></div>
+    </div>
+    <div class="Search">
+        <img src="Invitation.png" alt="Venue 2">
+        <div class="info"><h3>Invitations</h3></div>
+    </div>
+    <div class="Search">
+        <img src="Groom.jpeg" alt="Venue 3">
+        <div class="info"><h3>Groom makeup and wear</h3></div>
+    </div>
+    <div class="Search">
+        <img src="Catering.jpg" alt="Venue 4">
+        <div class="info"><h3>Catering</h3></div>
+    </div>
+    <div class="Search">
+        <img src="Decoration.jpg" alt="Venue 5">
+        <div class="info"><h3>Decorations</h3></div>
+    </div>
+    <div class="Search">
+        <img src="Bridal.jpg" alt="Venue 6">
+        <div class="info"><h3>Bridal Makeup and Wear</h3></div>
+    </div>
         
-    </section>
+ 
+</marquee>
+</div>
+</div>
+<!-----------------------------Footer----------------------------------->
+<footer style="background-color: rgba(0, 0, 0, 0.8); color: #fce4ea; padding: 30px 0;">
+    <div class="ofooter-container" style="margin-right:100px; margin-left:100px;">
+        <div class="row" style="display: flex; justify-content:space-between;">
+            <div class="col-md-3" style="margin-right: 95px">
+                <h4 style="font-family: Arial, sans-serif; color:#fbb5cc;">Start Planning</h4>
+                <br>
+                <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                    <li>Search By Vendor</li>
+                    <br>
+                    <li>Search By City</li>
+                    <br>
+                    <li>Download Our App</li>
+                    <br>
+                    <li>Top rated vendors</li>
+                </ul>
+            </div>
+            <div class="col-md-3" style="margin-right: 100px">
+                <h4 style="font-family: Arial, sans-serif; color:#fbb5cc;">Wedding Ideas</h4>
+                <br>
+                <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                    <li>Wedding Blog</li>
+                    <br>
+                    <li>Wedding Inspiration Gallery</li>
+                    <br>
+                    <li>Real Wedding</li>
+                    <br>
+                    <li>Submit Wedding</li>
+                </ul>
+
+            </div>
+            <div class="col-md-3" style="margin-right: 100px">
+                <h4 style="font-family: Arial, sans-serif; color:#fbb5cc;">Photo Gallery</h4>
+                <br>
+                <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                    <li>Bridal wear</li>
+                    <br>
+                    <li>Wedding Jwellery</li>
+                    <br>
+                    <li>Bridal Makeup and Hair</li>
+                    <br>
+                    <li>Wedding Photography</li>
+                    <br>
+                    <li>Groom wear</li>
+                    <br>
+                    <li>Wedding accessories</li>
+                    <br>
+                    <li>Mehendi Designs</li>
+                </ul>
+
+            </div>
+            <div class="col-md-3" style="margin-right: 100px">
+                <h4 style="font-family: Arial, sans-serif; color:#fbb5cc;">Home</h4>
+                <br>
+                <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                    <li>About PoshWeddings</li>
+                    <br>
+                    <li>Contact us</li>
+                    <br>
+                    <li>Yerms and Conditiions</li>
+                    <br>
+                    <li>Privacy Policy</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+       </footer>
+
+
 </body>
 </html>
