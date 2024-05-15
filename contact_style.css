@@ -60,7 +60,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #FD1593;
+    background-color: rgb(73, 73, 73);
     min-width: 160px;
     z-index: 1;
 }
