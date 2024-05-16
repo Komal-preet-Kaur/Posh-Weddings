@@ -1,0 +1,168 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+.navbar {
+    background-color: #FD1593;
+    padding: 10px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-list li {
+    margin-right: 20px;
+}
+
+.menu-list li:last-child {
+    margin-right: 0;
+}
+
+.menu-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#FD1593;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    background-color: #FFD1DC;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color:#FD1593;
+    font-size: 16px;
+}
+
+.search-container button i {
+    color: #FFD1DC;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .search-container button:hover {
+        background-color: #F8BDD1;
+    }
+
+    .menu-list {
+        margin-top: 10px;
+    }
+
+    .menu-list li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .dropdown {
+        margin-bottom: 10px;
+    }
+}
+/* navbar done*/
+.card-design {
+    text-align: center;
+    padding: 50px 0;
+}
+.card-design h2 {
+    color: #0f0f0f;
+}
+.card-design p {
+    color: #666;
+    font-size: 1.1em;
+}
+.card-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-item {
+    margin: 15px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.card-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.card-item h3 {
+    color: #333;
+    margin-top: 10px;
+}
